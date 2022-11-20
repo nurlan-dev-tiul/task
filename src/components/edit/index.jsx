@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useFetchById } from '../../hooks/useFetchById';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { editTaskApi } from '../../services/task';
 import { useNavigate } from "react-router-dom";
@@ -74,6 +74,9 @@ export const Edit = () => {
 							Сохранить
 						</button>
 					</div>
+					<Link to='/'>
+						На главную страницу
+					</Link>
 				</div>
 			</form>
         </div>

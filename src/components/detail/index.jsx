@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useFetchById } from '../../hooks/useFetchById';
 import dayjs from 'dayjs';
 import styles from './style.module.scss';
@@ -16,16 +16,19 @@ export const Detail = () => {
 				<h2>{task?.title}</h2>
 				<p>{task?.description}</p>
 				<h4>Дата окончания: {task?.time}{task?.time < form ? '(Истекло)': null}</h4>
-				<span>{task?.completed ? 'Выполнен' : 'Не выполнен'}</span>
+				<span><strong>Статус:</strong> {task?.completed ? 'Выполнено' : 'Не выполнено'}</span>
 				<div className={styles.box}>
 					{task?.file && (
 						task?.file.map((img, index) => (
 							<div className={styles.img_box} key={index}>
-								<img src={img?.url} alt="" />
+								<a href={img?.url} target="_blank">
+									<img src={img?.url} alt="" />
+								</a>
 							</div>
 						))
 					)}
 				</div>
+				<Link className={styles.detail_link} to='/'>{`<< На главную страницу`}</Link>
 			</div>
 		</div>
 	)
