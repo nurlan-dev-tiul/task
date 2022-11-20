@@ -1,0 +1,42 @@
+.form_wrapper {
+    padding: 20px;
+    .form_top{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .form_bottom {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .form_btn_side {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    label {
+        background-color: indigo;
+        color: white;
+        padding: 8px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .form_btn{
+        padding: 10px;
+        background-color: #0014a8;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+    }
+}

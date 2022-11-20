@@ -1,0 +1,27 @@
+.wrapper {
+    margin: 0 auto;
+    width: 700px;
+    height: 100%;
+    
+    @media (max-width: 767px){
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+.container{
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.home_link {
+    padding: 20px;
+    background-color: fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: indigo;
+}

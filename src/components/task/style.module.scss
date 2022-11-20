@@ -1,0 +1,36 @@
+.task {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 0px;
+    height: 100%;
+    margin-bottom: 10px;
+
+    .task_icons{
+        display: flex;
+        align-items: center;
+    }
+
+    .time {
+        margin-right: 10px;
+        font-style: italic;
+    }
+
+    .task_content{
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title{
+        font-size: 18px;
+        color: #292929;
+    }
+
+    .icon {
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        color: #292929;
+    }
+}
