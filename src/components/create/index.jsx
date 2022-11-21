@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { createTaskApi } from '../../services/task';
 import { Input, TextArea } from '../form';
 import { Link, useNavigate } from "react-router-dom";
-import dayjs from 'dayjs'
 import styles from './style.module.scss';
 import { resizeFile } from '../../utils/resizeImg';
 
@@ -39,7 +38,7 @@ export const Create = () => {
 		const formData = new FormData();
 		formData.append('title', task.title)
 		formData.append('description', task.description)
-		formData.append('time', dayjs(task.time).format('DD.MM.YYYY'))
+		formData.append('time', new Date(task.time))
 		for (const image of taskFile) {
 			formData.append("files", image);
 		}

@@ -5,8 +5,11 @@ import { truncateString } from '../../utils/truncateStr';
 import styles from './style.module.scss';
 
 export const Task = ({item, deleteTask, completeTask}) => {
-	const date = new Date();
-	const form = dayjs(date).format('DD.MM.YYYY');
+
+	const date = dayjs();
+	const date1 = dayjs(item?.time);
+	const res1 = date.diff(date1, 'day');
+	const res2 = date1.diff(date, 'day')
 
 	return (
 		<div className={styles.task}>
@@ -16,7 +19,7 @@ export const Task = ({item, deleteTask, completeTask}) => {
 				</Link>
 
 				<div className={styles.task_icons}>
-					{item?.time < form ? (
+					{res1 > res2 ? (
 						<h5 className={styles.time}>Истекло</h5>
 					) : null}
 					<BiCheckCircle 
