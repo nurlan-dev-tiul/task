@@ -14,9 +14,7 @@
 - MongoDb
 - Cloudinary
 
-
-## Какие технологии используются на сервере:
-Можете посмотреть [тут](https://github.com/nurlan-dev-tiul/task-api)
+Код можете посмотреть [тут](https://github.com/nurlan-dev-tiul/task-api)
 
 ## Что реализовано:
 - Добавление, удаление, редактирование
