@@ -3,7 +3,6 @@ import { createTaskApi } from '../../services/task';
 import { Input, TextArea } from '../form';
 import { Link, useNavigate } from "react-router-dom";
 import styles from './style.module.scss';
-import { resizeFile } from '../../utils/resizeImg';
 
 export const Create = () => {
     const navigate = useNavigate();
