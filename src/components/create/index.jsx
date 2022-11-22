@@ -21,7 +21,6 @@ export const Create = () => {
 
 	//! HandleChange и Preview Картинок
 	const handleFileChange = async(e) => {
-		await resizeFile(e.target.files[0])
 		setTaskFile([...taskFile, e.target.files[0]]);
 
 		const previewImage = URL.createObjectURL(e.target.files[0]);
